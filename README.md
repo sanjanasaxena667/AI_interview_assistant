@@ -1,6 +1,6 @@
 # AI Interview Coach
 
-A modern, polished React web application for AI-driven interview preparation. Practice your interview skills with personalized AI coaching, get real-time feedback, and track your progress over time.
+A modern, polished React web application for AI-driven interview preparation. Practice your interview skills with personalized AI coaching, get real-time feedback, and track your progress over time. Built an end-to-end AI-powered interview simulator using Ollama to run LLMs locally, enabling resume & job description analysis via Tesseract OCR and generating role-specific technical and behavioral questions. Developed a real-time voice interaction pipeline leveraging OpenAI Whisper for speech-to-text and Microsoft Edge TTS for AI-driven interviewer voice, supporting both voice and text-based responses.Engineered an automated evaluation & analytics system using the Qwen model for answer scoring (0–10 scale), feedback generation, and performance tracking dashboards to deliver actionable interview insights.
 
 ## Features
 
