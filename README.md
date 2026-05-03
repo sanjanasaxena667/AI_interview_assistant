@@ -1,35 +1,163 @@
-Step 1: Install the Tools
+# AI Interview Coach
 
-Ollama: Download from ollama.com and install.
+A modern, polished React web application for AI-driven interview preparation. Practice your interview skills with personalized AI coaching, get real-time feedback, and track your progress over time.
 
-Run this command in terminal: ollama pull deepseek-v3.1:671b-cloud
+## Features
 
-Tesseract OCR: Download this Windows Installer and install it.
+- 🎨 **Beautiful Modern UI** - Warm, welcoming color palette with glassmorphism effects
+- 🌓 **Dark/Light Theme** - Seamless theme toggle with smooth transitions
+- 📊 **Comprehensive Analytics** - Track your progress with detailed charts and metrics
+- 🎯 **Multiple Interview Types** - Technical, HR/Behavioral, and Behavioral interviews
+- 🎥 **Multi-modal Analysis** - Video, audio, and text-based interview modes
+- 📈 **Progress Tracking** - Monitor your improvement over time
+- 💬 **Real-time Feedback** - Get instant AI-powered feedback on your responses
 
-Install to default location: C:\Program Files\Tesseract-OCR
+## Tech Stack
 
-Poppler: Download this Zip file.
+- **React** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **Recharts** - Data visualization
+- **Lucide React** - Icons
+- **React Router** - Navigation
 
-Extract the folder to C:\Program Files\poppler.
+## Getting Started
 
-Check that this folder exists: C:\Program Files\poppler\poppler-24.02.0\Library\bin (This is where pdftoppm.exe lives).
+### Prerequisites
 
-Step 2: Check the Code Path
+- Node.js (v18 or higher)
+- npm or yarn
 
-Open interview_assistant.py and make sure line 13 matches your actual Poppler folder from Step 1.
+### Installation
 
-# Update this path if your folder name is different!
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd ai-interviewer
+```
 
-POPPLER_PATH = r"C:\Program Files\poppler\poppler-24.02.0\Library\bin"
+2. Install dependencies:
+```bash
+npm install
+```
 
-Step 3: Install Python Libraries
+3. Start the development server:
+```bash
+npm run dev
+```
 
-Open your terminal/command prompt in the project folder and run:
+4. Open your browser and navigate to `http://localhost:5173`
 
-pip install streamlit langchain-ollama langchain-core pytesseract pdf2image pillow
+### Build for Production
 
-Step 4: Run the App
+```bash
+npm run build
+```
 
-Run this command:
+The built files will be in the `dist` directory.
 
-streamlit run abcd.py
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable components
+│   └── Navbar.tsx   # Navigation bar with theme toggle
+├── contexts/         # React contexts
+│   └── ThemeContext.tsx  # Theme management
+├── pages/            # Page components
+│   ├── LandingPage.tsx
+│   ├── UploadPage.tsx
+│   ├── SetupPage.tsx
+│   ├── LoadingPage.tsx
+│   ├── InterviewRoom.tsx
+│   ├── FeedbackPage.tsx
+│   └── DashboardPage.tsx
+├── App.tsx           # Main app component
+├── main.tsx          # Entry point
+└── style.css         # Global styles and Tailwind directives
+```
+
+## Color Scheme
+
+### Light Theme
+- Primary: Warm coral (#FF6B6B) to peachy orange gradient
+- Secondary: Soft amber (#FFA94D)
+- Background: Cream/off-white (#FFF8F3)
+- Text: Warm dark grey (#2D3436)
+
+### Dark Theme
+- Primary: Vibrant coral (#FF8787)
+- Secondary: Golden amber (#FFB84D)
+- Background: Deep warm charcoal (#1A1A1D)
+- Text: Warm white (#FAF3E0)
+
+## Features Overview
+
+### Landing Page
+- Hero section with animated 3D avatar
+- Feature cards showcasing key capabilities
+- Call-to-action buttons
+
+### Upload Page
+- Drag-and-drop file uploads for resume and job description
+- Progress indicators
+- Role and experience level selection
+
+### Setup Page
+- Interview type selection (Technical, HR, Behavioral)
+- Mode selection (Video, Audio, Text)
+- Difficulty slider
+- Estimated time display
+
+### Loading Page
+- Animated progress indicators
+- Step-by-step status updates
+- Smooth transitions
+
+### Interview Room
+- Split-screen layout
+- Question display with timer
+- Video preview and recording controls
+- Microphone level visualizer
+- Progress tracking
+
+### Feedback Page
+- Overall score with circular progress chart
+- Category scores (Verbal, Non-verbal, Technical)
+- Performance over time chart
+- Question-by-question breakdown
+- Improvement suggestions
+
+### Dashboard
+- Statistics overview
+- Growth curve visualization
+- Recent sessions table
+- Filtering options
+
+## Customization
+
+### Colors
+Edit `tailwind.config.js` to customize the color palette.
+
+### Fonts
+The app uses Google Fonts (Outfit, Space Grotesk). You can change fonts in `index.html` and `tailwind.config.js`.
+
+### Animations
+Framer Motion animations can be customized in individual components.
+
+## License
+
+MIT
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
